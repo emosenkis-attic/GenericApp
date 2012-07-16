@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @listing.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @listing.descr %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @listing.url.length > 0 ? link_to(@listing.url, @listing.url) : 'None' %>
+</p>
+
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>
