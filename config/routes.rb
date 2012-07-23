@@ -1,6 +1,8 @@
 SampleApp::Application.routes.draw do
 
   resources :listings
+  match '/mobiledownload.json', to: 'listings#mobiledownload'
+  match '/mobileupload.json', to: 'listings#mobileupload'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
